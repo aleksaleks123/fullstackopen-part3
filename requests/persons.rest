@@ -1,0 +1,26 @@
+DELETE http://localhost:3001/api/persons/4 HTTP/1.1
+
+### valid
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "New Person",
+    "number": "123-12-43"
+}
+
+### no name
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "number": "123-12-43"
+}
+
+### no number
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "New Person"
+}
